@@ -1,4 +1,4 @@
-# thegreatmontgomeryhackathon
+# The Great Montgomery Hackathon
 
 The Great Montgomery Hackathon, February 8th and 9th, 2014.
 
