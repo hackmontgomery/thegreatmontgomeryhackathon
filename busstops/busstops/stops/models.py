@@ -31,6 +31,7 @@ class Stop(models.Model):
         if self.id is not None and int(api_data['stop_id']) != self.id:
             raise ValueError("Stop #%s in database can't be set with stop #%s from api." %
                              (self.id, api_data['stop_id']))
+        self.id = int(api_data['stop_id'])
         self.stop_code = int(api_data['stop_code'])
         self.stop_name = api_data['stop_name'][:300]  # todo: add logging if value greater than 300
         self.geom = Point(api_data['stop_lon'], api_data['stop_lat'])
@@ -63,6 +64,7 @@ class Route(models.Model):
         if self.id is not None and int(api_data['route_id']) != self.id:
             raise ValueError("Route` #%s in database can't be set with route #%s from api." %
                              (self.id, api_data['route_id']))
+        self.id = int(api_data['route_id'])
         self.route_short_name = api_data['route_short_name'][:300]
         self.route_long_name = api_data['route_long_name'][:300]
         self.route_desc = api_data['route_desc'] or None
@@ -82,19 +84,22 @@ class Trip(models.Model):
     modified_at = ModificationDateTimeField()
 
     id = models.IntegerField(primary_key=True)  # trip_id from API values
+    route = models.ForeignKey(Route)
     trip_headsign = models.CharField(max_length=300)
     geom = models.LineStringField()
 
-    def set_from_api(self, api_data):
+    def set_from_api(self, api_data, route):
         """
         Sets the object's attributes from json API data.
 
         @api_data: dict of json API data for the trip. See example at bottom of
                    this source file for what the data looks like.
         """
-        if self.id is not None and int(api_data['route_id']) != self.id:
+        if self.id is not None and int(api_data['trip_id']) != self.id:
             raise ValueError("Trip` #%s in database can't be set with trip #%s from api." %
-                             (self.id, api_data['route_id']))
+                             (self.id, api_data['trip_id']))
+        self.id = int(api_data['trip_id'])
+        self.route = route
         self.trip_headsign = api_data['trip_headsign'][:300]
         self.geom = LineString(*[coord for coord in api_data['geometry']['coordinates']])
 
@@ -114,7 +119,7 @@ class TripStop(models.Model):
     departure_time = models.TimeField()
     stop_sequence = models.IntegerField()
 
-    def set_from_api(self, api_data, trip):
+    def set_from_api(self, api_data, stop, trip):
         """
         Sets the object's attributes from json API data.
 
@@ -122,7 +127,7 @@ class TripStop(models.Model):
                    this source file for what the data looks like.
         """
         self.trip = trip
-        self.stop = Stop.objects.get(id=int(api_data['stop']['stop_id']))
+        self.stop = stop
         arrtime = time.gmtime(int(api_data['arrival_time']))
         self.arrival_time = datetime.time(arrtime.tm_hour, arrtime.tm_min, arrtime.tm_sec)
         deptime = time.gmtime(int(api_data['departure_time']))
