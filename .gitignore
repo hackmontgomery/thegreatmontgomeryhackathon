@@ -1,0 +1,9 @@
+Thumbs.db
+.DS_Store
+*.pyc
+*.log
+*.swp
+local_settings.py
+
+busstops/virenv
+.idea
