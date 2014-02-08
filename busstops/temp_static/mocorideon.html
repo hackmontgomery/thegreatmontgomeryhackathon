@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Moco RideOn</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="title">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<div data-role="collapsible" data-theme="b" data-content-theme="b">
+			<h2>Language</h2>
+   			 	<ul data-role="listview" data-filter="true">
+        			<li><a href="#two">English</a></li>
+        			<li><a href="index.html">German</a></li>
+        			<li><a href="index.html">Spanish</a></li>
+        			<li><a href="index.html">Portuguese</a></li>
+        			<li><a href="index.html">French</a></li>
+    			</ul>
+			</div><!--end collapsible-->
+		</div><!--end main-->
+		<div data-role="footer" data-position="fixed">
+			<h4 >Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page 1-->
+
+
+
+	<!--Start of Second Page-->
+	<div data-role="page" id="two">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<!--<label for="search">Search Input:</label>-->
+			<input type="search" name="password" id="search" value="" placeholder="Enter Address...">
+			<button class="ui-btn">Use Current Location</button>
+			<a href="#" class="ui-btn">Submit</a>
+			<div class="ui-grid-a">
+				<a href="#bus_numbers" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">1</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Home</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">2</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Work</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">3</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Granny's House</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<a href="#recent" class="ui-btn ui-corner-all">Recent Locations</a>
+		</div><!--end main content-->
+		<div data-role="footer" data-position="fixed">
+			<h4>Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page 2-->
+
+
+
+	<!--Start of recent Page-->
+	<div data-role="page" id="recent">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Go Back</a>
+			<div class="ui-grid-a">
+				<a href="#bus_numbers" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">1</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">18306 swan stream dr gaithersburg</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">2</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">28939 bennett ct bethesda</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">3</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">silver spring</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">4</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">germantown transit center</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+		</div><!--end main-->
+		<div data-role="footer" data-position="fixed">
+			<h4>Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page recent-->
+
+
+
+
+
+	<!--Start of Fourth Page-->
+	<div data-role="page" id="bus_numbers">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Go Back</a>
+			<div class="ui-grid-a">
+				<a href="#silverspring_16" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">16</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Silver Spring</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">16</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Takoma</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">30</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Bethesda</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+			<div class="ui-grid-a">
+				<a href="#" class="ui-btn">
+   					<div class="ui-block-a">
+   						<div class="ui-bar ui-bar-a" style="height:60px">30</div>
+   					</div><!--end a-->
+    				<div class="ui-block-b">
+    					<div class="ui-bar ui-bar-a" style="height:60px; width: 200px">Medical Center</div>
+    				</div><!--end b-->
+    			</a>
+			</div><!-- /grid-a -->
+		</div><!--end main-->
+		<div data-role="footer" data-position="fixed">
+			<h4>Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page 4-->
+
+
+
+
+	<!--Start of Fifth Page-->
+	<div data-role="page" id="silverspring_16">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Go Back</a>
+			<h1 class="ui-bar ui-bar-a">16 Silver Spring</h1>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h3>Bus Stop Location:</h3>
+      			<p>Muncaster Mill rd & Ivy oak Dr. Stop id: 2446</p>
+  			</div><!--end stop location-->
+  			<div class="ui-corner-all custom-corners">
+  				<div class="ui-bar ui-bar-a">
+    				<h3>Next Bus Due</h3>
+  				</div><!--end bus time header-->
+  				<div class="ui-body ui-body-a">
+   		 			<ul data-role="listview">
+    					<li><a href="#">2:25pm</a></li>
+    					<li><a href="#">2:45pm</a></li>
+    					<li><a href="#">3:00pm</a></li>
+    					<li><a href="#">3:25pm</a></li>
+    					<li><a href="#">3:45pm</a></li>
+					</ul>
+  				</div><!--end bus times list-->
+			</div><!--end bus times main-->
+		</div><!--end main-->
+		<div data-role="footer" data-position="fixed">
+			<h4>Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page 5-->
+
+
+
+
+
+	<!--Start of Sixth Page-->
+	<div data-role="page" id="title">
+		<div data-role="header">
+			<h1>Logo</h1>
+		</div><!--end header-->
+		<div role="main" class="ui-content">
+			<p>content 12345</p>
+			<p>lots of content</p>
+		</div><!--end main-->
+		<div data-role="footer" data-position="fixed">
+			<h4>Page footer</h4>
+		</div><!--end footer-->
+	</div><!--end page 6-->
+
+
+</body>
+</html>
